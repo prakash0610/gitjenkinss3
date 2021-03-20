@@ -7,7 +7,7 @@ pipeline {
             }
 
         }
-        stage('Build') {
+        stage('Test') {
             steps{
                 sh "ls -latr"
                 sh "pwd"
