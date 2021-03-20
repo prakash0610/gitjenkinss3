@@ -16,7 +16,7 @@ pipeline {
         stage('Copy') {
           steps{
             withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'awsjenkins', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-              sh "sudo s3 cp https://github.com/prakash0610/gitjenkinss3/* s3://pabugitjenkinss3/"
+              sh "aws s3 cp https://github.com/prakash0610/gitjenkinss3/* s3://pabugitjenkinss3/"
 
              }
           }
