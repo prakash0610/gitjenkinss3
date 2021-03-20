@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps{
                 sh "ls -latr"
+                sh "pwd"
             }
         }
         stage('Copy') {
