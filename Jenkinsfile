@@ -22,4 +22,9 @@ pipeline {
           }
         }
     }
+    post {
+      always {
+        emailext body: 'done', subject: 'copy to s3 success', to: 'prabhattarai1992@gmail.com'
+      }
+    }
 }
