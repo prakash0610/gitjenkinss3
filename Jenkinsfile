@@ -16,7 +16,7 @@ pipeline {
           steps{
             withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'awsjenkins', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
               sh "cd"
-              sh " /.local/bin/aws aws s3 ls"
+              sh " /usr/local/bin/aws aws s3 ls"
              }
           }
         }
